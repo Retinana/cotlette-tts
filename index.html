@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Say Stuff</title>
+</head>
+<body>
+  <h1>Say Something</h1>
+  <input type="text" id="text" placeholder="Type here">
+  <button onclick="sayStuff()">Speak</button>
+
+  <script>
+    function sayStuff() {
+      const text = document.getElementById('text').value;
+      const utter = new SpeechSynthesisUtterance(text);
+      speechSynthesis.speak(utter);
+    }
+  </script>
+</body>
+</html>
